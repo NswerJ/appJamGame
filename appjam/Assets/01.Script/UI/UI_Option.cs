@@ -14,6 +14,7 @@ public class UI_Option : MonoBehaviour
     public AudioClip click;
     public Sprite[] btnKind;
     public GameObject[] button;
+    public AudioSource[] audioSource;
     void Start()
     {
        UI_EventHandler evt = back.GetComponent<UI_EventHandler>();
@@ -33,7 +34,7 @@ public class UI_Option : MonoBehaviour
         float volume = musicSlider.value;
         mixer.SetFloat("music",Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("musicVolume", volume);
-        GetComponent<AudioSource>().PlayOneShot(click);
+        audioSource[1].PlayOneShot(click);
     }
 
     public void SetSFXVolume()
@@ -41,7 +42,7 @@ public class UI_Option : MonoBehaviour
         float volume = sfxSlider.value;
         mixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("SFXVolume", volume);
-        GetComponent<AudioSource>().PlayOneShot(click);
+        audioSource[0].PlayOneShot(click);
     }
 
     void LoadVolume()

@@ -10,6 +10,7 @@ public class CalenderText : MonoBehaviour
     string text1Text;
     string text2Text;
     bool istyping;
+    public AudioClip clip;
     void Start()
     {
         if (GameManager.Instance.isClear[stageIndex])
@@ -33,6 +34,7 @@ public class CalenderText : MonoBehaviour
         for(int i = 0; i < s.Length; i++)
         {
             text1.text += s.Substring(i, 1);
+            GetComponent<AudioSource>().PlayOneShot(clip);
             yield return new WaitForSeconds(0.07f);
         }
         yield return new WaitForSeconds(1f);
@@ -40,6 +42,7 @@ public class CalenderText : MonoBehaviour
         for (int i = 0; i < s.Length; i++)
         {
             text2.text += s.Substring(i, 1);
+            GetComponent<AudioSource>().PlayOneShot(clip);
             yield return new WaitForSeconds(0.05f);
         }
         Destroy(gameObject);
