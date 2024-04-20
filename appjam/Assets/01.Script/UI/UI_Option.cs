@@ -12,11 +12,17 @@ public class UI_Option : MonoBehaviour
     public Slider sfxSlider;
     public AudioMixer mixer;
     public AudioClip click;
+    public Sprite[] btnKind;
+    public GameObject[] button;
     void Start()
     {
        UI_EventHandler evt = back.GetComponent<UI_EventHandler>();
         evt.OnClick += (PointerEventData p) => { Destroy(gameObject); };
-        if(PlayerPrefs.HasKey("musicVolume"))
+       evt = button[0].GetComponent<UI_EventHandler>();
+        evt.OnClick += (PointerEventData p) => { Destroy(gameObject); };
+        evt = button[0].GetComponent<UI_EventHandler>();
+        evt.OnClick += (PointerEventData p) => { Destroy(gameObject); };
+        if (PlayerPrefs.HasKey("musicVolume"))
          LoadVolume();
         else
         {
