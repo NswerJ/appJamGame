@@ -11,6 +11,7 @@ public class UI_StageOption : MonoBehaviour
     public GameObject leave;
     public GameObject changeUI;
     public AudioClip click;
+ 
     void Start()
     {
         Time.timeScale = 0;
@@ -34,7 +35,8 @@ public class UI_StageOption : MonoBehaviour
 
     IEnumerator ChangeScene(int i)
     {
-        Instantiate(changeUI).GetComponent<Animator>().Play("Before"); GetComponent<AudioSource>().PlayOneShot(click);
+        Instantiate(changeUI).GetComponent<Animator>().Play("Before"); ;
+        
         yield return new WaitForSeconds(1f);
         switch (i)
         {

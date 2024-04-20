@@ -1795,7 +1795,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   back: {fileID: 7990549685355607839}
-  click: {fileID: 8300000, guid: a643746b7cc480b41850a89d27608749, type: 3}
+  click: {fileID: 8300000, guid: b8cab79e81e870148a3ca59bbcf31d1e, type: 3}
+  check: {fileID: 8300000, guid: a643746b7cc480b41850a89d27608749, type: 3}
   checkBoxKinds:
   - {fileID: 21300000, guid: 055670d7832f36b47836b07a3f5e49f0, type: 3}
   - {fileID: 21300000, guid: b1a4cc953e9f0c54db9c83a6f380399e, type: 3}
