@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stage4
       objectReference: {fileID: 0}
+    - target: {fileID: 6548562983949327536, guid: 1a86a6e7e87e1b14a9369b1007f88639, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
