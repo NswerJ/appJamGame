@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerSpawnManager : MonoBehaviour
@@ -42,7 +43,8 @@ public class PlayerSpawnManager : MonoBehaviour
         if (SpawnCurrentTime > SpawnTime && SnakeCount > currentSnakeCount)
         {
             currentSnakeCount++;
-            Instantiate(snake, snakeSpawnPoint.position, Quaternion.identity);
+            GameObject snakespawn = Instantiate(snake, snakeSpawnPoint.position, Quaternion.identity);
+            snakespawn.name = snakespawn.name.Replace("(Clone)", "");
             SpawnTime = 0;
         }
        /* if (Input.GetKeyDown(KeyCode.Q))
@@ -53,7 +55,8 @@ public class PlayerSpawnManager : MonoBehaviour
         if (SpawnCurrentTime > SpawnTime && ClearPlayerCount > currentPlayerCount)
         {
             currentPlayerCount++;
-            Instantiate(clearPlayer, ClearPlayerSpawnPoint.position, Quaternion.identity);
+            GameObject player = Instantiate(clearPlayer, ClearPlayerSpawnPoint.position, Quaternion.identity);
+            player.name = player.name.Replace("(Clone)", "");
             SpawnTime = 0;
         }
     }

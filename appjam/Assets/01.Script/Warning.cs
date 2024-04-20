@@ -15,7 +15,7 @@ public class Warning : MonoBehaviour
         // target과 enemy의 위치를 찾습니다.
         enemy = transform.parent;
 
-        target = GameObject.Find("target(Clone)").transform;
+        target = GameObject.Find("target").transform;
         // Warning 오브젝트를 enemy의 자식으로 설정합니다.
         transform.SetParent(enemy);
 
