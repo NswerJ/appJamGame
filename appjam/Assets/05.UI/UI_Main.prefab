@@ -714,6 +714,8 @@ MonoBehaviour:
   changeUI: {fileID: 6856748098696514868, guid: aa391f21b6807dc4ca760a0729adcac4, type: 3}
   optionUI: {fileID: 185038755992201431, guid: 3faff4000eeb2d742b71c81171321d69, type: 3}
   click: {fileID: 8300000, guid: b8cab79e81e870148a3ca59bbcf31d1e, type: 3}
+  rose: {fileID: 136040955722711299}
+  redRose: {fileID: 21300000, guid: 893a8f0a9d8733340beb573b2e4f3d9d, type: 3}
 --- !u!95 &3119581077061685954
 Animator:
   serializedVersion: 5

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UI_Main : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class UI_Main : MonoBehaviour
     public GameObject changeUI;
     public GameObject optionUI;
     public AudioClip click;
+    public Image rose;
+    public Sprite redRose;
     void Start()
     {
         UI_EventHandler evt = start.GetComponent<UI_EventHandler>();
@@ -21,6 +24,9 @@ public class UI_Main : MonoBehaviour
         evt.OnClick += (PointerEventData p) => { Instantiate(optionUI); GetComponent<AudioSource>().PlayOneShot(click); };
         evt = exit.GetComponent<UI_EventHandler>();
         evt.OnClick += (PointerEventData p) => { Application.Quit(); };
+
+        if (GameManager.Instance.isClear[5])
+            rose.sprite = redRose;
     }
 
     IEnumerator ChangeScene()
