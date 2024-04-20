@@ -129,12 +129,25 @@ MonoBehaviour:
   clearPlace: {fileID: 0}
   clearRange: {x: 100, y: 0, z: 0}
   playerSpeed: 2
+  dieEffect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
   dieEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7679876350782089317}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: playerDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7679876350782089317}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: dieEffectShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

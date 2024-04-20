@@ -103,6 +103,7 @@ MonoBehaviour:
   PreventEvent:
     m_PersistentCalls:
       m_Calls: []
+  dieEffect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
 --- !u!50 &-2981519475876471638
 Rigidbody2D:
   serializedVersion: 4

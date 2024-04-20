@@ -6,7 +6,6 @@ public class BodyPart : MonoBehaviour
     public float rotationSpeed = 5f; // 회전 속도
     public UnityEvent PreventEvent;
     private bool isMoving = true;
-
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -28,4 +27,6 @@ public class BodyPart : MonoBehaviour
         }
         
     }
+
+   
 }

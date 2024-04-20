@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Transform clearPlace;
     public Vector3 clearRange;
     public float playerSpeed;
+    public GameObject dieEffect;
 
     public UnityEvent dieEvent;
     public UnityEvent clearEvent;
@@ -24,8 +25,11 @@ public class PlayerController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
     // Update is called once per frame
+    public void dieEffectShow()
+    {
+        Instantiate(dieEffect, transform.position, Quaternion.identity);
+    }
     void Update()
     {
         Vector3 direction = (clearPlace.position - transform.position).normalized;

@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeSO: {fileID: 11400000, guid: 9f01fb837551eb24cbd91e6d1122f9cd, type: 2}
+  dieEffect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
   PreventEvent:
     m_PersistentCalls:
       m_Calls: []
