@@ -19,13 +19,13 @@ public class Stage6 : MonoBehaviour
         while (true)
         {
             p3.play();
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(5f);
             p4.play();
-            yield return new WaitForSeconds(5f); 
+            yield return new WaitForSeconds(6f); 
             Instantiate(Resources.Load("Circle"));
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.6f);
             Instantiate(Resources.Load("Circle"));
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.6f);
             Instantiate(Resources.Load("Circle"));
             yield return new WaitForSeconds(5f);
         }
