@@ -8,6 +8,8 @@ public class Pattern1 : MonoBehaviour
     Vector3 mainCamera;
     Vector3 vec;
 
+    public GameObject Effect;
+
     [SerializeField]
     float speed = 2;
     float width;
@@ -44,12 +46,20 @@ public class Pattern1 : MonoBehaviour
         if(collision.gameObject.CompareTag("target"))
         {
             //
+            dieEffectShow(collision.gameObject);
             Destroy(this.gameObject);
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
             //
+            dieEffectShow(collision.gameObject);
             Destroy(this.gameObject);
         }
+    }
+
+    public void dieEffectShow(GameObject obj)
+    {
+        GameObject effct = Instantiate(Effect, obj.transform.position, Quaternion.identity);
+        Destroy(effct, 1.5f);
     }
 }

@@ -8,6 +8,7 @@ public class Pattern2 : MonoBehaviour
     [SerializeField]
     GameObject warning;
     GameObject target;
+    public GameObject Effect;
 
     Vector3 vec;
 
@@ -40,18 +41,27 @@ public class Pattern2 : MonoBehaviour
                     {
                         length = (hitinfos.collider.gameObject.transform.position - this.gameObject.transform.position).sqrMagnitude;
                         laser.transform.localScale = new Vector3(0.2f, Mathf.Sqrt(length) * 2, this.gameObject.transform.localScale.y);
+                        dieEffectShow(hitinfos.collider.gameObject);
                         break;
                     }
                     else if (hitinfos.collider.gameObject.CompareTag("target"))
                     {
                         length = (hitinfos.collider.gameObject.transform.position - this.gameObject.transform.position).sqrMagnitude;
                         laser.transform.localScale = new Vector3(0.2f, Mathf.Sqrt(length) * 2, this.gameObject.transform.localScale.y);
+                        dieEffectShow(hitinfos.collider.gameObject);
                         break;
                     }
                 }
             }
         }
     }
+    public void dieEffectShow(GameObject obj)
+    {
+        GameObject effct = Instantiate(Effect, obj.transform.position, Quaternion.identity);
+        Destroy(effct, 1.5f);
+    }
+
+
     private void set()
     {
         float angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
