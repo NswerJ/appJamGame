@@ -55,12 +55,12 @@ public class Pattern1 : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             dieEffectShow(collision.gameObject);
-            Destroy(this.gameObject);
         }
     }
     public void dieEffectShow(GameObject obj)
     {
         GameObject effct = Instantiate(Effect, obj.transform.position, Quaternion.identity);
         Destroy(effct, 1.5f);
+            Destroy(this.gameObject);
     }
 }

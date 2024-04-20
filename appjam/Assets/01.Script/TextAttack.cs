@@ -55,7 +55,6 @@ public class TextAttack : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // 플레이어에 닿으면 이 텍스트를 삭제하고 플레이어에게 이펙트를 생성합니다.
-            Destroy(this.gameObject);
             ShowEffect(other.transform.position);
         }
         
@@ -66,6 +65,7 @@ public class TextAttack : MonoBehaviour
         // 이펙트 생성 및 0.5초 후에 삭제
         GameObject effect = Instantiate(effectPrefab, position, Quaternion.identity);
         Destroy(effect, 0.5f);
+            Destroy(this.gameObject);
     }
 
 }
