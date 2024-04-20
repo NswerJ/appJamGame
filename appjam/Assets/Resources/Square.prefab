@@ -100,10 +100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textPrefab: {fileID: 1632421664469214535, guid: 50990fb4abd0d244fbb90a1a3aa1faed, type: 3}
-  warning: {fileID: 8056067898370006532}
-  effectPrefab: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
-  textToDisplay: Hello
-  textSpeed: 1
 --- !u!1 &7509203857786842759
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,3 +355,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea1bc3f6a14dcea4cac1fa90e094072c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}

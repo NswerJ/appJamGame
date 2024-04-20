@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class Stage5 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    Pattern3 p3;
+    Pattern4 p4;
+    private void Start()
     {
-        
-    }
+        p3 = GameObject.Find("stage5").GetComponent<Pattern3>();
+        p4 = GameObject.Find("stage5").GetComponent<Pattern4>();
 
-    // Update is called once per frame
-    void Update()
+        StartCoroutine(pattern());
+    }
+    private IEnumerator pattern()
     {
-        
+        yield return new WaitForSeconds(0f);
+        while (true)
+        {
+            Instantiate(Resources.Load("Circle"));
+            Instantiate(Resources.Load("Circle"));
+            Instantiate(Resources.Load("Circle"));
+            yield return new WaitForSeconds(1f);
+            Instantiate(Resources.Load("Circle"));
+            Instantiate(Resources.Load("Circle"));
+            Instantiate(Resources.Load("Circle"));
+            yield return new WaitForSeconds(1f);
+            p3.play();
+            yield return new WaitForSeconds(1f);
+            p4.play();
+            yield return new WaitForSeconds(1f);
+        }
     }
 }
