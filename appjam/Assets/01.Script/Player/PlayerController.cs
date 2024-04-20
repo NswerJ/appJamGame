@@ -62,6 +62,9 @@ public class PlayerController : MonoBehaviour
     public void LoadNextScene()
     {
         GameManager.Instance.isClear[SceneManager.GetActiveScene().buildIndex-2] = true;
-        SceneManager.LoadScene("ChoiceStage");
+        if(SceneManager.GetActiveScene().buildIndex == 7)
+            SceneManager.LoadScene("Main");
+        else
+            SceneManager.LoadScene("ChoiceStage");
     }
 }

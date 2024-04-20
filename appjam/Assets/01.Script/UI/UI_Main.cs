@@ -10,9 +10,11 @@ public class UI_Main : MonoBehaviour
     public GameObject start;
     public GameObject option;
     public GameObject exit;
+    public GameObject help;
 
     public GameObject changeUI;
     public GameObject optionUI;
+    public GameObject helpUI;
     public AudioClip click;
     public Image rose;
     public Sprite redRose;
@@ -24,6 +26,8 @@ public class UI_Main : MonoBehaviour
         evt.OnClick += (PointerEventData p) => { Instantiate(optionUI); GetComponent<AudioSource>().PlayOneShot(click); };
         evt = exit.GetComponent<UI_EventHandler>();
         evt.OnClick += (PointerEventData p) => { Application.Quit(); };
+        evt = help.GetComponent<UI_EventHandler>();
+        evt.OnClick += (PointerEventData p) => { Instantiate(helpUI); };
 
         if (GameManager.Instance.isClear[5])
             rose.sprite = redRose;

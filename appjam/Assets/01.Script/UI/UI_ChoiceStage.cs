@@ -9,6 +9,7 @@ public class UI_ChoiceStage : MonoBehaviour
 {
     public GameObject back;
     public AudioClip click;
+    public AudioClip check;
     public Sprite[] checkBoxKinds;
     public Image[] checkBoxs;
     public GameObject[] checkSign;
@@ -74,7 +75,12 @@ public class UI_ChoiceStage : MonoBehaviour
 
     IEnumerator ChangeScene(int i)
     {
-        Instantiate(changeUI).GetComponent<Animator>().Play("Before"); GetComponent<AudioSource>().PlayOneShot(click);
+        Instantiate(changeUI).GetComponent<Animator>().Play("Before");
+        if (i == 0)
+            GetComponent<AudioSource>().PlayOneShot(click);
+        else
+
+            GetComponent<AudioSource>().PlayOneShot(check);
         yield return new WaitForSeconds(1);
         switch (i) 
         {
