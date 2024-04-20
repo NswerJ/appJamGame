@@ -23,13 +23,10 @@ public class PlayerController : MonoBehaviour
 
     public void playerDie()
     {
-        Destroy(gameObject);
+        Destroy(this.gameObject);
     }
     // Update is called once per frame
-    public void dieEffectShow()
-    {
-        Instantiate(dieEffect, transform.position, Quaternion.identity);
-    }
+    
     void Update()
     {
         Vector3 direction = (clearPlace.position - transform.position).normalized;
@@ -48,20 +45,11 @@ public class PlayerController : MonoBehaviour
             transform.position = Vector3.zero;
             clearEvent?.Invoke();
         }
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") || collision.CompareTag("laser"))
         {
-            Debug.Log("꼬리에 맞음");
+            Debug.Log("꼬리에 맞음 또는 장애물에 맞음");
             dieEvent?.Invoke();
         }
-        if (collision.CompareTag("Player"))
-        {
-            Debug.Log("머리에 맞음");
-            dieEvent?.Invoke();
-        }
-        if (collision.CompareTag("laser"))
-        {
-            Debug.Log("장애물에 맞음");
-            dieEvent?.Invoke();
-        }
+        
     }
 }

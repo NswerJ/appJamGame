@@ -16,7 +16,7 @@ public class Pattern2 : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.Find("target");
+        target = GameObject.Find("target").gameObject;
 
         vec = (transform.position - target.transform.position).normalized;
 
