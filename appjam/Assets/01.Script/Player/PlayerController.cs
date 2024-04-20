@@ -44,17 +44,17 @@ public class PlayerController : MonoBehaviour
             transform.position = Vector3.zero;
             clearEvent?.Invoke();
         }
-        if (collision.CompareTag("SNAKETAIL"))
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("꼬리에 맞음");
             dieEvent?.Invoke();
         }
-        if (collision.CompareTag("SNAKEHEAD"))
+        if (collision.CompareTag("Player"))
         {
             Debug.Log("머리에 맞음");
             dieEvent?.Invoke();
         }
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("laser"))
         {
             Debug.Log("장애물에 맞음");
             dieEvent?.Invoke();

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -404757729472054961}
   m_Layer: 0
   m_Name: SnakeTail
-  m_TagString: SNAKETAIL
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 5
+  PreventEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &-2981519475876471638
 Rigidbody2D:
   serializedVersion: 4

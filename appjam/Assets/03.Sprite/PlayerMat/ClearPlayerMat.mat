@@ -511,7 +511,7 @@ Material:
     - _AddColorColor: {r: 2.996078, g: 0, b: 0, a: 0}
     - _AlphaTintColor: {r: 95.87451, g: 5.019608, b: 95.87451, a: 0}
     - _BlackTintColor: {r: 0, g: 0, b: 1, a: 0}
-    - _BurnEdgeColor: {r: 11.98431, g: 1.129412, b: 0.1254902, a: 0}
+    - _BurnEdgeColor: {r: 15.999997, g: 1.361702, b: 0, a: 0}
     - _BurnEdgeNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
     - _BurnInsideColor: {r: 0.75, g: 0.5625, b: 0.525, a: 0}
     - _BurnInsideNoiseColor: {r: 3084.047, g: 257.0039, b: 0, a: 0}
@@ -553,7 +553,7 @@ Material:
     - _FrozenHighlightSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _FrozenSnowColor: {r: 1.123529, g: 1.373203, b: 1.498039, a: 0}
     - _FrozenSnowScale: {r: 0.1, g: 0.1, b: 0, a: 0}
-    - _FrozenTint: {r: 1.819608, g: 4.611765, b: 5.992157, a: 0}
+    - _FrozenTint: {r: 8, g: 0.536027, b: 0, a: 0}
     - _FullAlphaDissolveNoiseScale: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _FullDistortionDistortion: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _FullDistortionNoiseScale: {r: 0.5, g: 0.5, b: 0, a: 0}
@@ -567,17 +567,17 @@ Material:
     - _GlitchNoiseScale: {r: 0, g: 3, b: 0, a: 0}
     - _GlitchNoiseSpeed: {r: 0, g: 1, b: 0, a: 0}
     - _HalftonePosition: {r: 0, g: 0, b: 0, a: 0}
-    - _HologramTint: {r: 3.9999998, g: 0.54339594, b: 0.5790539, a: 1}
+    - _HologramTint: {r: 5.3403134, g: 0.27205327, b: 0.33348668, a: 1}
     - _InkSpreadColor: {r: 8.47419, g: 5.013525, b: 0.08873497, a: 0}
     - _InkSpreadNoiseScale: {r: 0.4, g: 0.4, b: 0, a: 0}
     - _InkSpreadPosition: {r: 0.5, g: -1, b: 0, a: 0}
-    - _InnerOutlineColor: {r: 11.98431, g: 1.254902, b: 1.254902, a: 1}
+    - _InnerOutlineColor: {r: 15.999997, g: 0, b: 0, a: 1}
     - _InnerOutlineDistortionIntensity: {r: 0.01, g: 0.01, b: 0, a: 0}
     - _InnerOutlineNoiseScale: {r: 4, g: 4, b: 0, a: 0}
     - _InnerOutlineNoiseSpeed: {r: 0, g: 0.1, b: 0, a: 0}
     - _InnerOutlineTextureSpeed: {r: 0.5, g: 0, b: 0, a: 0}
     - _MetalColor: {r: 8, g: 0.39101967, b: 0, a: 1}
-    - _MetalHighlightColor: {r: 8, g: 0.9741012, b: 0, a: 1}
+    - _MetalHighlightColor: {r: 0.6675392, g: 0.08387926, b: 0, a: 1}
     - _MetalNoiseDistortion: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _MetalNoiseDistortionScale: {r: 0.2, g: 0.2, b: 0, a: 0}
     - _MetalNoiseDistortionSpeed: {r: -0.05, g: -0.05, b: 0, a: 0}
@@ -608,7 +608,7 @@ Material:
     - _RecolorRGBYCPYellowTint: {r: 1, g: 1, b: 1, a: 0.5019608}
     - _ScreenTilingOffset: {r: 0, g: 0, b: 0, a: 0}
     - _ScreenTilingScale: {r: 1, g: 1, b: 0, a: 0}
-    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ShadowColor: {r: 1, g: 1, b: 1, a: 0}
     - _ShadowOffset: {r: 0.05, g: -0.05, b: 0, a: 0}
     - _ShiftingColorA: {r: 1.498039, g: 0, b: 0, a: 0}
     - _ShiftingColorB: {r: 1.498039, g: 0.7490196, b: 0, a: 0}
@@ -623,12 +623,12 @@ Material:
     - _SourceGlowDissolveEdgeColor: {r: 11.98431, g: 0.627451, b: 0.627451, a: 0}
     - _SourceGlowDissolveNoiseScale: {r: 0.3, g: 0.3, b: 0, a: 0}
     - _SourceGlowDissolvePosition: {r: 0, g: 0, b: 0, a: 0}
-    - _SplitToningHighlightsColor: {r: 1, g: 0.1, b: 0.1, a: 0}
-    - _SplitToningShadowsColor: {r: 0.1, g: 0.4000002, b: 1, a: 0}
+    - _SplitToningHighlightsColor: {r: 1, g: 0, b: 0, a: 0}
+    - _SplitToningShadowsColor: {r: 0, g: 0.3318777, b: 1, a: 0}
     - _SpriteSheetRect: {r: 0, g: 0, b: 1, a: 1}
     - _SqueezeCenter: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _SqueezeScale: {r: 2, g: 0, b: 0, a: 0}
-    - _StrongTintTint: {r: 1, g: 1, b: 1, a: 1}
+    - _StrongTintTint: {r: 1, g: 0, b: 0, a: 1}
     - _TextureLayer1Color: {r: 0.4494117, g: 1.298301, b: 2.996079, a: 1}
     - _TextureLayer1Offset: {r: 0, g: 0, b: 0, a: 0}
     - _TextureLayer1Scale: {r: 1, g: 1, b: 0, a: 0}

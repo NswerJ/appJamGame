@@ -41,10 +41,11 @@ public class SnakeController : MonoBehaviour
         {
             rb.velocity = direction * snakeSO.moveSpeed;
             MoveTail();
+            Quaternion lookRotation = Quaternion.LookRotation(Vector3.forward, direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5f * Time.deltaTime);
         }
 
-        Quaternion lookRotation = Quaternion.LookRotation(Vector3.forward, direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5f * Time.deltaTime);
+      
     }
 
     // 꼬리 이동 함수
@@ -70,12 +71,5 @@ public class SnakeController : MonoBehaviour
         tailParts.Add(newBodyPart);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Obstacle"))
-        {
-            PreventEvent?.Invoke();
-            Debug.Log("방해물 막음");
-        }
-    }
+    
 }
