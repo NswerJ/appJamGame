@@ -26,7 +26,7 @@
             float xpos;
             float ypos;
 
-            GameObject p1 = (GameObject)Instantiate(Resources.Load("Circle"));
+            GameObject p1 = (GameObject)Instantiate(Resources.Load("FxxK3"));
 
             yield return new WaitForSeconds(0.05f);
 

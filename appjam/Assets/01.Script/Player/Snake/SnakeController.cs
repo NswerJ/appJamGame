@@ -55,11 +55,11 @@ public class SnakeController : MonoBehaviour
         {
             if (i == 0)
             {
-                tailParts[i].position = Vector3.Lerp(tailParts[i].position, transform.position, Time.deltaTime * 10f);
+                tailParts[i].position = Vector3.Lerp(tailParts[i].position, transform.position, Time.deltaTime * 13f);
             }
             else
             {
-                tailParts[i].position = Vector3.Lerp(tailParts[i].position, tailParts[i - 1].position, Time.deltaTime * 10f);
+                tailParts[i].position = Vector3.Lerp(tailParts[i].position, tailParts[i - 1].position, Time.deltaTime * 13f);
             }
         }
     }

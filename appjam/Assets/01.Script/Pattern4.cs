@@ -26,11 +26,6 @@ public class Pattern4 : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         go = (GameObject)Instantiate(Resources.Load("Square"));
-        go.transform.position = new Vector3(target.x - 4f, target.y - 3f);
-
-        yield return new WaitForSeconds(delay);
-
-        go = (GameObject)Instantiate(Resources.Load("Square"));
         go.transform.position = new Vector3(target.x - 4f, target.y + 3f);
 
         yield return new WaitForSeconds(delay);

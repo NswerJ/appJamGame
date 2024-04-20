@@ -272,7 +272,7 @@ MonoBehaviour:
   clearPlayer: {fileID: 8308555358849947045, guid: 79237e7f8852d904b959fe53f93b388e, type: 3}
   snakeSpawnPoint: {fileID: 6705160003348110390}
   ClearPlayerSpawnPoint: {fileID: 7033609496444276667}
-  SpawnTime: 2
+  SpawnTime: 8
   SnakeCount: 1
   ClearPlayerCount: 1
   SpawnCurrentTime: 0

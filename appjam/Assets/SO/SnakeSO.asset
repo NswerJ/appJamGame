@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 662098e4024d9ce4392242d14a733ea4, type: 3}
   m_Name: SnakeSO
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 8
   stopDistance: 0.1
   bodyPartPrefab: {fileID: 8253418450158506876, guid: 1d1f3bf4eb319e7419fa3e4e9b804115, type: 3}
   followInterval: 0.5
-  initialTailCount: 15
+  initialTailCount: 12
