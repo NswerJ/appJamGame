@@ -25,10 +25,10 @@ public class Pattern1 : MonoBehaviour
 
         setPosition();
 
-        vec = (target.transform.position - transform.position).normalized;
     }
     private void Update()
     {
+        vec = (target.transform.position - transform.position).normalized;
         transform.position += vec * speed * Time.deltaTime * 2;
     }
     private void setPosition()
@@ -63,7 +63,6 @@ public class Pattern1 : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
     public void dieEffectShow(GameObject obj)
     {
         GameObject effct = Instantiate(Effect, obj.transform.position, Quaternion.identity);

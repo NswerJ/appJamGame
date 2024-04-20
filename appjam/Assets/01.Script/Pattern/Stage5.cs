@@ -15,7 +15,7 @@ public class Stage5 : MonoBehaviour
     }
     private IEnumerator pattern()
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(2f);
         while (true)
         {
             Instantiate(Resources.Load("Circle"));

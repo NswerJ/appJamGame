@@ -12,7 +12,7 @@ public class Stage1 : MonoBehaviour
     }
     private IEnumerator pattern()
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(2f);
         while(true)
         {
             p3.play();
