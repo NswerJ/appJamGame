@@ -241,10 +241,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3256837696603174261, guid: 9936bdcaab9f1ce4297d53c68d2fe9b8, type: 3}
-      propertyPath: SpawnTime
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6286123459176225886, guid: 9936bdcaab9f1ce4297d53c68d2fe9b8, type: 3}
       propertyPath: m_Name
       value: Manager
