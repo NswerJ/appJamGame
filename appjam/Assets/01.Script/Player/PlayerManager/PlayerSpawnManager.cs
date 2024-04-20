@@ -5,21 +5,29 @@ using UnityEngine;
 public class PlayerSpawnManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject player;
+    private GameObject snake; //지켜줄 지렁이
     [SerializeField]
-    private Transform spawnPoint;//스폰이 필요하면 
+    private GameObject clearPlayer; //플레이어
+    [SerializeField]
+    private Transform snakeSpawnPoint; //스폰이 필요하면 
+    [SerializeField]
+    private Transform ClearPlayerSpawnPoint; //스폰이 필요하면 
 
     [Header("최댓 값")]
     [SerializeField]
     private float SpawnTime = 2.0f; // 일정 시간뒤에 생성
     [SerializeField]
-    private float SpanwCount = 1f; // 플레이어 스폰 갯수
+    private float SnakeCount = 1f; // 플레이어 스폰 갯수
+    [SerializeField]
+    private float ClearPlayerCount = 1f; // 플레이어 스폰 갯수
 
     [Header("현재 값")]
     [SerializeField]
     private float SpawnCurrentTime = 0; // 일정 시간뒤에 생성
     [SerializeField]
-    private float currentSpanwCount = 0f; // 플레이어 스폰 갯수
+    private float currentSnakeCount = 0f; // 플레이어 스폰 갯수
+    [SerializeField]
+    private float currentPlayerCount = 0f; // 플레이어 스폰 갯수
     
     // Start is called before the first frame update
     void Start()
@@ -31,15 +39,22 @@ public class PlayerSpawnManager : MonoBehaviour
     void Update()
     {
         SpawnCurrentTime += Time.deltaTime;
-        if(SpawnCurrentTime > SpawnTime && SpanwCount > currentSpanwCount)
+        if (SpawnCurrentTime > SpawnTime && SnakeCount > currentSnakeCount)
         {
-            currentSpanwCount++;
-            Instantiate(player, spawnPoint.position, Quaternion.identity);
+            currentSnakeCount++;
+            Instantiate(snake, snakeSpawnPoint.position, Quaternion.identity);
             SpawnTime = 0;
         }
-        /*if (Input.GetKeyDown(KeyCode.Q))
+       /* if (Input.GetKeyDown(KeyCode.Q))
         {
-            Instantiate(player, spawnPoint.position, Quaternion.identity);
+            Instantiate(snake, snakeSpawnPoint.position, Quaternion.identity);
         }*/
+        SpawnCurrentTime += Time.deltaTime;
+        if (SpawnCurrentTime > SpawnTime && ClearPlayerCount > currentPlayerCount)
+        {
+            currentPlayerCount++;
+            Instantiate(clearPlayer, ClearPlayerSpawnPoint.position, Quaternion.identity);
+            SpawnTime = 0;
+        }
     }
 }

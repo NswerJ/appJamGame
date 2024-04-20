@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName =("SO/Player/Stat"))]
-public class PlayerSO : ScriptableObject
+public class SnakeSO : ScriptableObject
 {
     [Header("플레이어 스탯")]
     [SerializeField] public float moveSpeed = 5f; // 머리 따라오는 스피드

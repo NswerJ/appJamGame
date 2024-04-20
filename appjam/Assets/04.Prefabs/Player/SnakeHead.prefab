@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5362475133723910509}
   - component: {fileID: 2013330131337401637}
   m_Layer: 0
-  m_Name: PlayerHead
+  m_Name: SnakeHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 58464ebf12302764392d3f5e3c160041, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69024ecba17129e4797848f4d99c4683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSO: {fileID: 11400000, guid: 9f01fb837551eb24cbd91e6d1122f9cd, type: 2}
+  snakeSO: {fileID: 11400000, guid: 9f01fb837551eb24cbd91e6d1122f9cd, type: 2}
 --- !u!50 &2013330131337401637
 Rigidbody2D:
   serializedVersion: 4
