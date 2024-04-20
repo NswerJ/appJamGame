@@ -330,7 +330,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1311b52f7a32e244cbfd31d3c1561e56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fff72c81b60c3ef42b6ead0bd88620d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -354,7 +354,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snakeSO: {fileID: 11400000, guid: 9f01fb837551eb24cbd91e6d1122f9cd, type: 2}
-  dieEffect: {fileID: 6813416509558619124, guid: 3b7f2c753d435d647a80f1f047a113e3, type: 3}
   PreventEvent:
     m_PersistentCalls:
       m_Calls: []
