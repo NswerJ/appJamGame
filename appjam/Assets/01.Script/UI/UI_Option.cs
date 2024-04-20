@@ -19,9 +19,6 @@ public class UI_Option : MonoBehaviour
        UI_EventHandler evt = back.GetComponent<UI_EventHandler>();
         evt.OnClick += (PointerEventData p) => { Destroy(gameObject); };
        evt = button[0].GetComponent<UI_EventHandler>();
-        evt.OnClick += (PointerEventData p) => { Destroy(gameObject); };
-        evt = button[0].GetComponent<UI_EventHandler>();
-        evt.OnClick += (PointerEventData p) => { Destroy(gameObject); };
         if (PlayerPrefs.HasKey("musicVolume"))
          LoadVolume();
         else
