@@ -27,7 +27,7 @@ public class UI_StageOption : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Time.timeScale = 0;
+            Time.timeScale = 1;
             Destroy(gameObject);
         }
     }
