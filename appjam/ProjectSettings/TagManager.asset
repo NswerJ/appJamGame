@@ -6,6 +6,8 @@ TagManager:
   tags:
   - target
   - laser
+  - CLEAR
+  - TEXT
   layers:
   - Default
   - TransparentFX

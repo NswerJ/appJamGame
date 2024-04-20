@@ -52,12 +52,7 @@ public class Pattern1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("target"))
-        {
-            dieEffectShow(collision.gameObject);
-            Destroy(collision.gameObject);
-        }
-        else if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Player"))
         {
             dieEffectShow(collision.gameObject);
             Destroy(this.gameObject);
