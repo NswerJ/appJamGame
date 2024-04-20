@@ -1168,6 +1168,7 @@ GameObject:
   - component: {fileID: 8006713819791084286}
   - component: {fileID: 7355591741960872579}
   - component: {fileID: 4557494574978422792}
+  - component: {fileID: 6156815259356578287}
   m_Layer: 5
   m_Name: CheckSign
   m_TagString: Untagged
@@ -1232,6 +1233,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &6156815259356578287
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3422713789962981462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81c476c46eb406342bd4ebc355907205, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3548986952326538052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1344,7 @@ GameObject:
   - component: {fileID: 7813212929540469810}
   - component: {fileID: 3852963890577141877}
   - component: {fileID: 210913255834352182}
+  - component: {fileID: 5076753269849078772}
   m_Layer: 5
   m_Name: CheckSign
   m_TagString: Untagged
@@ -1386,6 +1409,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &5076753269849078772
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642448549035236970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81c476c46eb406342bd4ebc355907205, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3755252700003787231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,7 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   back: {fileID: 7990549685355607839}
-  click: {fileID: 8300000, guid: b8cab79e81e870148a3ca59bbcf31d1e, type: 3}
+  click: {fileID: 8300000, guid: a643746b7cc480b41850a89d27608749, type: 3}
   checkBoxKinds:
   - {fileID: 21300000, guid: 055670d7832f36b47836b07a3f5e49f0, type: 3}
   - {fileID: 21300000, guid: b1a4cc953e9f0c54db9c83a6f380399e, type: 3}
@@ -2631,6 +2675,7 @@ GameObject:
   - component: {fileID: 7703437822614562148}
   - component: {fileID: 6156387954590843031}
   - component: {fileID: 2773300252386621580}
+  - component: {fileID: 1294618201798852992}
   m_Layer: 5
   m_Name: CheckSign
   m_TagString: Untagged
@@ -2695,6 +2740,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &1294618201798852992
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6369072969841002431}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81c476c46eb406342bd4ebc355907205, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6757621609943920155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2786,6 +2852,7 @@ GameObject:
   - component: {fileID: 4465964308848294506}
   - component: {fileID: 6234932784712729615}
   - component: {fileID: 612400775930904269}
+  - component: {fileID: 6360747144322759452}
   m_Layer: 5
   m_Name: CheckSign
   m_TagString: Untagged
@@ -2850,6 +2917,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &6360747144322759452
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6774266303749237408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81c476c46eb406342bd4ebc355907205, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6824373055866465233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +3028,7 @@ GameObject:
   - component: {fileID: 8667235363721535387}
   - component: {fileID: 2606328215070120848}
   - component: {fileID: 6485744535113293078}
+  - component: {fileID: 3965649361344241820}
   m_Layer: 5
   m_Name: CheckSign
   m_TagString: Untagged
@@ -3004,6 +3093,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &3965649361344241820
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6841733278425507721}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81c476c46eb406342bd4ebc355907205, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6857236599331746926
 GameObject:
   m_ObjectHideFlags: 0
