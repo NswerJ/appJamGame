@@ -4,10 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Obstacle
-  - CLEAR
-  - SNAKEHEAD
-  - SNAKETAIL
+  - target
   layers:
   - Default
   - TransparentFX

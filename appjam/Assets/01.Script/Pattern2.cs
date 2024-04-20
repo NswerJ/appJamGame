@@ -6,6 +6,7 @@ public class Pattern2 : MonoBehaviour
     [SerializeField]
     GameObject laser;
     GameObject target;
+    GameObject player;
 
     Vector3 vec;
 
@@ -14,39 +15,49 @@ public class Pattern2 : MonoBehaviour
     private void Start()
     {
         target = GameObject.Find("target");
+        player = GameObject.Find("player");
 
-        set();
-
-        vec = (target.transform.position - transform.position).normalized;
+        vec = (transform.position - target.transform.position).normalized;
 
         StartCoroutine(Laser());
     }
     private void Update()
     {
-        Debug.DrawRay(this.transform.position + Vector3.up, Vector3.forward * 10, Color.red);
+        Quaternion quater = transform.rotation;
+        Vector2 startPos = transform.position;
+        RaycastHit2D[] hit = Physics2D.RaycastAll(this.gameObject.transform.position, quater * Vector2.down * 10, 10.0f);
+        Debug.DrawRay(startPos, quater * Vector2.down * 10, Color.green);
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(this.transform.position, this.transform.forward);
-        length = (this.gameObject.transform.position - hitInfo.transform.position).sqrMagnitude;
-
-        if (hitInfo.transform.gameObject.CompareTag("Player"))
+        foreach(RaycastHit2D hitinfos in hit)
         {
-            laser.transform.localScale = new Vector3(laser.transform.localScale.x, length, laser.transform.localScale.z);
-        }
-        else
-        {
-            laser.transform.localScale = new Vector3(laser.transform.localScale.x, length, laser.transform.localScale.z);
+            if (hitinfos.collider != null)
+            {
+                if (hitinfos.collider.gameObject.CompareTag("Player"))
+                {
+                    length = (hitinfos.collider.gameObject.transform.position - this.gameObject.transform.position).sqrMagnitude;
+                    laser.transform.localScale = new Vector3(0.2f, Mathf.Sqrt(length) * 2, this.gameObject.transform.localScale.y);
+                    break;
+                }
+                else if (hitinfos.collider.gameObject.CompareTag("target"))
+                {
+                    length = (hitinfos.collider.gameObject.transform.position - this.gameObject.transform.position).sqrMagnitude;
+                    laser.transform.localScale = new Vector3(0.2f, Mathf.Sqrt(length) * 2, this.gameObject.transform.localScale.y);
+                    break;
+                }
+            }
         }
     }
     private void set()
     {
-        transform.rotation = Quaternion.Euler(0, 180, -(Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg));
+        float angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
 
-        //position
+        transform.rotation = Quaternion.Euler(0, 0,-90 + angle);
 
         this.gameObject.transform.SetParent(target.transform);
     }
     private IEnumerator Laser()
     {
+        set();
         yield return new WaitForSeconds(1);
         laser.SetActive(true);
         yield return new WaitForSeconds(5f);
