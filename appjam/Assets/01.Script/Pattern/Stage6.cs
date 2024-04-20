@@ -15,17 +15,19 @@ public class Stage6 : MonoBehaviour
     }
     private IEnumerator pattern()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
         while (true)
         {
             p3.play();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(4f);
             p4.play();
-            yield return new WaitForSeconds(1f); 
+            yield return new WaitForSeconds(5f); 
             Instantiate(Resources.Load("Circle"));
+            yield return new WaitForSeconds(0.5f);
             Instantiate(Resources.Load("Circle"));
+            yield return new WaitForSeconds(0.5f);
             Instantiate(Resources.Load("Circle"));
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(5f);
         }
     }
 }

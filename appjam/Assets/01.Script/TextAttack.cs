@@ -58,12 +58,7 @@ public class TextAttack : MonoBehaviour
             Destroy(this.gameObject);
             ShowEffect(other.transform.position);
         }
-        else if (other.CompareTag("target"))
-        {
-            // 타겟에 닿으면 타겟을 삭제하고 타겟에게 이펙트를 생성합니다.
-            Destroy(other.gameObject);
-            ShowEffect(other.transform.position);
-        }
+        
     }
 
     private void ShowEffect(Vector3 position)

@@ -9,7 +9,6 @@ public class Pattern4 : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.Find("target").transform.position;
     }
     public void play()
     {
@@ -17,25 +16,12 @@ public class Pattern4 : MonoBehaviour
     }
     public IEnumerator pattern()
     {
+        target = GameObject.Find("target").transform.position;
+
         GameObject go;
 
         go = (GameObject)Instantiate(Resources.Load("Square"));
         go.transform.position = new Vector3(target.x, target.y + 4.5f);
-
-        yield return new WaitForSeconds(delay);
-
-        go = (GameObject)Instantiate(Resources.Load("Square"));
-        go.transform.position = new Vector3(target.x + 4f, target.y + 3f);
-
-        yield return new WaitForSeconds(delay);
-
-        go = (GameObject)Instantiate(Resources.Load("Square"));
-        go.transform.position = new Vector3(target.x + 4f, target.y - 3f);
-
-        yield return new WaitForSeconds(delay);
-
-        go = (GameObject)Instantiate(Resources.Load("Square"));
-        go.transform.position = new Vector3(target.x, target.y - 4.5f);
 
         yield return new WaitForSeconds(delay);
 
@@ -46,5 +32,12 @@ public class Pattern4 : MonoBehaviour
 
         go = (GameObject)Instantiate(Resources.Load("Square"));
         go.transform.position = new Vector3(target.x - 4f, target.y + 3f);
+
+        yield return new WaitForSeconds(delay);
+
+        go = (GameObject)Instantiate(Resources.Load("Square"));
+        go.transform.position = new Vector3(target.x, target.y - 4.5f);
+
+        yield return new WaitForSeconds(delay);
     }
 }
