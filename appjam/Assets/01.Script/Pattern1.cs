@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Pattern1 : MonoBehaviour
 {
+    [SerializeField]
+    float speed = 2;
+    
     GameObject target;
 
     Vector3 mainCamera;
@@ -10,8 +13,6 @@ public class Pattern1 : MonoBehaviour
 
     public GameObject Effect;
 
-    [SerializeField]
-    float speed = 2;
     float width;
     float height;
     private void Start()
@@ -28,14 +29,19 @@ public class Pattern1 : MonoBehaviour
     }
     private void Update()
     {
-        transform.position += vec * speed * Time.deltaTime;
+        transform.position += vec * speed * Time.deltaTime * 2;
     }
     private void setPosition()
     {
-        int xpos = Random.Range(-1, 2);
-        int ypos = Random.Range(-1, 2);
+        int xpos = Random.Range(0, 2);
+        int ypos = Random.Range(0, 2);
 
-        transform.position = new Vector3(mainCamera.x + width + xpos, mainCamera.y + height + ypos, 0);
+        if(xpos == 0) { xpos = 1; }
+        else { xpos = -1; }
+        if(ypos == 0) { ypos = 1; }
+        else { ypos = -1; }
+
+        transform.position = new Vector3(target.transform.position.x + ((width / 2) * -xpos) + xpos, target.transform.position.y + ((height / 2) * -ypos) + ypos, 0);
     }
     private void OnBecameInvisible()
     {
@@ -45,13 +51,11 @@ public class Pattern1 : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("target"))
         {
-            //
             dieEffectShow(collision.gameObject);
             Destroy(this.gameObject);
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
-            //
             dieEffectShow(collision.gameObject);
             Destroy(this.gameObject);
         }

@@ -5,15 +5,17 @@ public class Pattern4 : MonoBehaviour
 {
     Vector3 target;
 
-    float delay = 1.3f;
+    float delay = 0.7f;
 
     private void Start()
     {
         target = GameObject.Find("target").transform.position;
-
+    }
+    public void play()
+    {
         StartCoroutine(pattern());
     }
-    private IEnumerator pattern()
+    public IEnumerator pattern()
     {
         GameObject go;
 
