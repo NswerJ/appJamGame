@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6548562983949327536, guid: 1a86a6e7e87e1b14a9369b1007f88639, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -192,6 +192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3256837696603174261, guid: 9936bdcaab9f1ce4297d53c68d2fe9b8, type: 3}
+      propertyPath: SpawnTime
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6286123459176225886, guid: 9936bdcaab9f1ce4297d53c68d2fe9b8, type: 3}
       propertyPath: m_Name
       value: Manager
@@ -572,7 +576,7 @@ AudioSource:
   m_GameObject: {fileID: 1546911816}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8455812912046438293, guid: 8d276f0b2bc61e54ba178d7244d8f00c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0fc10618424cdfc44829258f0ed79321, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
