@@ -33,6 +33,9 @@ public class Pattern1 : MonoBehaviour
     }
     private void setPosition()
     {
+
+        target = GameObject.Find("target");
+
         int xpos = Random.Range(0, 2);
         int ypos = Random.Range(0, 2);
 

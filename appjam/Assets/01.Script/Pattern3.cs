@@ -14,7 +14,6 @@
             height = Camera.main.orthographicSize * 2;
             width = height * Camera.main.aspect;
 
-            target = GameObject.Find("target").transform.position;
         }
         public void play()
         {
@@ -22,6 +21,8 @@
         }
         public IEnumerator pattern()
         {
+            target = GameObject.Find("target").transform.position;
+
             float xpos;
             float ypos;
 
