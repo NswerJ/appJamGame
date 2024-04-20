@@ -5,7 +5,7 @@ using UnityEngine;
 public class Warning : MonoBehaviour
 {
     SpriteRenderer render;
-    Transform target; // target의 위치를 저장할 변수
+    public Transform target; // target의 위치를 저장할 변수
     Transform enemy; // enemy의 위치를 저장할 변수
 
     private void Start()
@@ -13,9 +13,9 @@ public class Warning : MonoBehaviour
         render = GetComponent<SpriteRenderer>();
 
         // target과 enemy의 위치를 찾습니다.
-        target = GameObject.Find("target").transform;
         enemy = transform.parent;
 
+        target = GameObject.Find("target(Clone)").transform;
         // Warning 오브젝트를 enemy의 자식으로 설정합니다.
         transform.SetParent(enemy);
 

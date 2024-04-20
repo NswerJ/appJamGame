@@ -42,7 +42,7 @@ public class TextAttack : MonoBehaviour
 
             while (transform.position != targetPosition)
             {
-                float distanceCovered = (Time.time - startTime) * 5; // 이동 속도를 조정할 수 있습니다.
+                float distanceCovered = (Time.time - startTime) * 10; // 이동 속도를 조정할 수 있습니다.
                 float fractionOfJourney = distanceCovered / journeyLength;
                 transform.position = Vector3.Lerp(startPosition, targetPosition, fractionOfJourney);
                 yield return null;
