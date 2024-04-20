@@ -61,21 +61,7 @@ public class PlayerController : MonoBehaviour
 
     public void LoadNextScene()
     {
-        // 현재 씬의 인덱스를 가져옵니다.
-        int currentIndex = SceneManager.GetActiveScene().buildIndex;
-
-        // 다음 씬의 인덱스를 계산합니다.
-        int nextIndex = currentIndex + 1;
-
-        // 다음 씬이 존재하는지 확인합니다.
-        if (nextIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            // 다음 씬으로 이동합니다.
-            SceneManager.LoadScene(nextIndex);
-        }
-        else
-        {
-            Debug.LogWarning("No next scene available!");
-        }
+        GameManager.Instance.isClear[SceneManager.GetActiveScene().buildIndex-2] = true;
+        SceneManager.LoadScene("ChoiceStage");
     }
 }
