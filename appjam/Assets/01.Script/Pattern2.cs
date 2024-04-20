@@ -1,86 +1,121 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
+
+enum StageSentences
+{
+    Stage1,
+    Stage2,
+    Stage3,
+    Stage4,
+    Stage5,
+    Stage6,
+}
 
 public class Pattern2 : MonoBehaviour
 {
-    [SerializeField] private GameObject laser;
-    [SerializeField] private GameObject warning;
-    [SerializeField] private GameObject effectPrefab; // 이펙트 프리팹
-    [SerializeField] private int maxEffects = 3; // 최대 생성 이펙트 수
+    [SerializeField] private TextMeshPro textPrefab;
+    private List<string[]> stageSentences = new List<string[]> {
+        new string[] {
+            "정말할수있어?",
+            "내가보기에는아닌거같은데",
+            "굳이그래야해?",
+            "난잘모르겠어",
+            "아닌거같아이건",
+            "너가할수있는지잘모르겠어"
+        },
+        new string[] {
+            "정말할수있어?",
+            "내가보기에는아닌거같은데",
+            "굳이그래야해?",
+            "난잘모르겠어",
+            "아닌거같아이건",
+            "너가할수있는지잘모르겠어"
+        },
+        new string[] {
+            "생각보다별로야",
+            "재미없어",
+            "할줄아는게있어?",
+            "뭐가문제야?",
+            "그렇게말고이렇게좀해봐",
+            "굳이그래야해?",
+            "내가보기에는아닌거같은데",
+        },
+        new string[] {
+            "생각보다별로야",
+            "재미없어",
+            "할줄아는게있어?",
+            "뭐가문제야?",
+            "그렇게말고이렇게좀해봐",
+            "굳이그래야해?",
+            "내가보기에는아닌거같은데",
+        },
+        new string[] {
+            "저리가",
+            "그냥꺼져",
+            "너필요없어",
+            "진짜못하는구나",
+            "내가어디까지해줬야하는데?",
+            "그만해이제",
+            "내눈에띄지마이제"
+        },
+        new string[] {
+            "정말할수있어?",
+            "내가보기에는아닌거같은데",
+            "굳이그래야해?",
+            "난잘모르겠어",
+            "아닌거같아이건",
+            "너가할수있는지잘모르겠어"
+        },
+    };
 
-    private GameObject target;
-    private Vector3 vec;
-    private float length;
+    private string[] currentSentences;
 
     private void Start()
     {
-        target = GameObject.Find("target").gameObject;
-        vec = (transform.position - target.transform.position).normalized;
-        SetRotation();
-        StartCoroutine(Warning());
+        currentSentences = GetStageSentences();
+        StartCoroutine(ShowTextCharacters());
     }
 
-    private void Update()
+    private string[] GetStageSentences()
     {
-        if (laser.activeSelf)
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        switch (currentSceneName)
         {
-            Quaternion quater = transform.rotation;
-            Vector2 startPos = transform.position;
-            RaycastHit2D[] hit = Physics2D.RaycastAll(this.gameObject.transform.position, quater * Vector2.down * 10, 10.0f);
-            Debug.DrawRay(startPos, quater * Vector2.down * 10, Color.green);
-
-            foreach (RaycastHit2D hitinfos in hit)
-            {
-                if (hitinfos.collider != null)
-                {
-                    if (hitinfos.collider.gameObject.CompareTag("Player") )
-                    {
-                        length = (hitinfos.collider.gameObject.transform.position - this.gameObject.transform.position).sqrMagnitude;
-                        laser.transform.localScale = new Vector3(0.2f, Mathf.Sqrt(length) * 2, this.gameObject.transform.localScale.y);
-                        break;
-                    }
-                    if (hitinfos.collider.gameObject.CompareTag("target"))
-                    {
-                        length = (hitinfos.collider.gameObject.transform.position - this.gameObject.transform.position).sqrMagnitude;
-                        laser.transform.localScale = new Vector3(0.2f, Mathf.Sqrt(length) * 2, this.gameObject.transform.localScale.y);
-                        ShowkillEffect(hitinfos.collider.gameObject);
-                        break;
-                    }
-                }
-            }
+            case "Stage1":
+                return stageSentences[(int)StageSentences.Stage1];
+            case "Stage2":
+                return stageSentences[(int)StageSentences.Stage2];
+            case "Stage3":
+                return stageSentences[(int)StageSentences.Stage3];
+            case "Stage4":
+                return stageSentences[(int)StageSentences.Stage4];
+            case "Stage5":
+                return stageSentences[(int)StageSentences.Stage5];
+            case "Stage6":
+                return stageSentences[(int)StageSentences.Stage6];
+            default:
+                Debug.LogWarning("Unknown scene: " + currentSceneName);
+                return null;
         }
     }
 
-    private void ShowkillEffect(GameObject obj)
+    private IEnumerator ShowTextCharacters()
     {
-        GameObject effect = Instantiate(effectPrefab, obj.transform.position, Quaternion.identity);
-        Destroy(effect, 0.5f);
-    }
+        yield return new WaitForSeconds(2f);
+        string randomSentence = currentSentences[Random.Range(0, currentSentences.Length)];
 
-    private void SetRotation()
-    {
-        float angle = Mathf.Atan2(vec.y, vec.x) * Mathf.Rad2Deg;
-        laser.SetActive(false);
-        transform.rotation = Quaternion.Euler(0, 0, -90 + angle);
-        this.gameObject.transform.SetParent(target.transform);
+        foreach (char letter in randomSentence)
+        {
+            TextMeshPro textInstance = Instantiate(textPrefab, transform.position, Quaternion.identity);
+            textInstance.text = letter.ToString();
+            yield return new WaitForSeconds(0.15f);
+        }
     }
-
-    private IEnumerator Warning()
-    {
-        yield return new WaitForSeconds(1.5f);
-        StartCoroutine(Laser());
-    }
-
-    private IEnumerator Laser()
-    {
-        warning.SetActive(false);
-        laser.SetActive(true);
-        yield return new WaitForSeconds(5f);
-        laser.SetActive(false);
-        Destroy(this.gameObject);
-    }
-
-   
 }
+
+
