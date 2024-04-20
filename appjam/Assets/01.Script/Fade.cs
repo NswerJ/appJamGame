@@ -15,17 +15,20 @@ public class Fade : MonoBehaviour
     {
         float value = 1f;
         bool isIn = false;
-        while (true)
+        int count = 0;
+        while (count < 7)
         {
             // value가 0 이하이고 isIn이 false인 경우 isIn을 true로 변경합니다.
             if (value <= 0 && !isIn)
             {
                 isIn = true;
+                count++;
             }
             // value가 1 이상이고 isIn이 true인 경우 isIn을 false로 변경합니다.
             else if (value >= 1 && isIn)
             {
                 isIn = false;
+                count++;
             }
 
             // isIn 값에 따라 value 값을 증가 또는 감소시킵니다.
